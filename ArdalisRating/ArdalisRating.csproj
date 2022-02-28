@@ -10,6 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ArdalisRating.Logging\ArdalisRating.Logging.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="samplePolicies.json.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

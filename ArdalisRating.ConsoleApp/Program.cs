@@ -1,6 +1,7 @@
-﻿using System;
+﻿using ArdalisRating.Core;
+using System;
 
-namespace ArdalisRating
+namespace ArdalisRating.ConsoleApp
 {
     class Program
     {

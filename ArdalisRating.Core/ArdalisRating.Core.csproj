@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ArdalisRating.Domain\ArdalisRating.Domain.csproj" />
+    <ProjectReference Include="..\ArdalisRating.Persistence\ArdalisRating.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

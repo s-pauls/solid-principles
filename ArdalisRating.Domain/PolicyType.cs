@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ArdalisRating
+﻿namespace ArdalisRating.Domain
 {
 
     public enum PolicyType

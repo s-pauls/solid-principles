@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using ArdalisRating.Domain;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.IO;
 
-namespace ArdalisRating
+namespace ArdalisRating.Core
 {
     /// <summary>
     /// The RatingEngine reads the policy application details from a file and produces a numeric 
@@ -12,6 +13,7 @@ namespace ArdalisRating
     public class RatingEngine
     {
         public decimal Rating { get; set; }
+
         public void Rate()
         {
             Console.WriteLine("Starting rate.");

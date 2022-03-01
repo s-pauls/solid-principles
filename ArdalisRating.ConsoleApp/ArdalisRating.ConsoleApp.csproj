@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ArdalisRating.Core\ArdalisRating.Core.csproj" />
     <ProjectReference Include="..\ArdalisRating.Domain\ArdalisRating.Domain.csproj" />
+    <ProjectReference Include="..\ArdalisRating.Logging\ArdalisRating.Logging.csproj" />
   </ItemGroup>
 
 </Project>

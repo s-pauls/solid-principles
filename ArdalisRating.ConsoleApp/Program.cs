@@ -1,5 +1,5 @@
 ﻿using ArdalisRating.Core;
-using System;
+using ArdalisRating.Logging;
 
 namespace ArdalisRating.ConsoleApp
 {
@@ -7,18 +7,19 @@ namespace ArdalisRating.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ardalis Insurance Rating System Starting...");
+            var logger = new ConsoleLogger();
+            logger.Log("Ardalis Insurance Rating System Starting...");
 
             var engine = new RatingEngine();
             engine.Rate();
 
             if (engine.Rating > 0)
             {
-                Console.WriteLine($"Rating: {engine.Rating}");
+                logger.Log($"Rating: {engine.Rating}");
             }
             else
             {
-                Console.WriteLine("No rating produced.");
+                logger.Log("No rating produced.");
             }
 
         }

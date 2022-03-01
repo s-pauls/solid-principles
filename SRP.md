@@ -1,5 +1,7 @@
 ﻿# Single Responsibility Principle
 
+[Home](README.md)
+
 ## Defining
 
 Each softwear module should have only one and only one reason to change.
@@ -29,7 +31,7 @@ Offers a modular way to choose which details are involved in particular operatio
 **Separation of Concerns**
 Programs should be separated into distint sections, each addressing a separate concern, or set of information that affects the program.
 
-This [example](https://github.com/ardalis/SolidSample/blob/master/ArdalisRating/RatingEngine.cs) demonstrates violation of SRP:
+This [example](https://github.com/s-pauls/solid-principles/blob/main/ArdalisRating/RatingEngine.cs) demonstrates violation of SRP:
 - Logging (using Console object)
 - Persistence (reading data from file)
 - Encoding Format (JSON format only)

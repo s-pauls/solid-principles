@@ -15,7 +15,7 @@ namespace ArdalisRating.Core.Raters
             }
             catch
             {
-                return new UnknownPolicyRater(engine, engine.Logger);
+                throw new NotImplementedException();
             }
         }
     }

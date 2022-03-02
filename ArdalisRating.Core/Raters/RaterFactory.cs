@@ -1,4 +1,5 @@
 ﻿using ArdalisRating.Domain;
+using System;
 
 namespace ArdalisRating.Core.Raters
 {
@@ -6,16 +7,15 @@ namespace ArdalisRating.Core.Raters
     {
         public RaterBase Create(Policy policy, RatingEngine engine)
         {
-            switch (policy.Type)
+            try
             {
-                case PolicyType.Life:
-                    return new LifePolicyRater(engine, engine.Logger);
-                case PolicyType.Land:
-                    return new LandPolicyRater(engine, engine.Logger);
-                case PolicyType.Auto:
-                    return new AutoPolicyRater(engine, engine.Logger);
-                default:
-                    return new UnknownPolicyRater(engine, engine.Logger);
+                return (RaterBase)Activator.CreateInstance(
+                    Type.GetType($"ArdalisRating.Core.Raters.{policy.Type}PolicyRater"),
+                        new object[] { engine, engine.Logger });
+            }
+            catch
+            {
+                return new UnknownPolicyRater(engine, engine.Logger);
             }
         }
     }

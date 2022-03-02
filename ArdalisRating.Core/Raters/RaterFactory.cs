@@ -1,5 +1,4 @@
 ﻿using ArdalisRating.Domain;
-using System;
 
 namespace ArdalisRating.Core.Raters
 {
@@ -16,9 +15,7 @@ namespace ArdalisRating.Core.Raters
                 case PolicyType.Auto:
                     return new AutoPolicyRater(engine, engine.Logger);
                 default:
-                    throw new NotImplementedException();
-                    // TODO: Implement Null Object Pattern
-                    // Logger.Log("Unknown policy type")
+                    return new UnknownPolicyRater(engine, engine.Logger);
             }
         }
     }
